@@ -4,11 +4,50 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+<section class='bg-zinc-100 h-screen flex flex-col items-center justify-start sm:justify-center'>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  <p class='font-serif text-2xl py-6 text-zinc-600'>michoel<span class='font-bold text-lime-600'>samuels</span>.com</p>
+
+  <article class='bg-white border-t-2 border-lime-500  shadow-md bg-opacity-100 p-8 py-12 h-min rounded-sm' style='max-width:32rem;'>
+    
+    <h1 class='font-serif text-5xl mb-8 text-zinc-700 leading-none'><span class='text-lime-600'>Look Mom,</span></br>my own domain!</h1>
+    
+    <div class='text-lg text-zinc-600 mb-8 leading-7'>
+      <p class='mb-1'>Hey, I just parked my own domain name.</p>
+      <p>Not sure what I'll do with this, but in the meantime feel free to get in touch.</p>
+    </div>
+
+    <div class='flex flex-col sm:flex-row text-center'>
+      <a 
+        class='transition-all hover:filter hover:brightness-105 rounded-full hover:border-stone-200 bg-gradient-to-br from-lime-400 to-lime-600 text-white px-8 py-3 font-semibold shadow-lg hover:shadow-xl shadow-lime-500/20 hover:shadow-lime-500/20 hover:ring-2 ring-lime-600 mb-4 sm:mb-0 sm:mr-2'
+      href="mailto:michoel@hey.com">Email me ›</a>
+      <a 
+        class='transition-all rounded-full  hover:ring-2 ring-zinc-300  bg-zinc-100 text-lime-700 px-8 py-3 font-semibold'
+      href="https://calendly.com/michoels">Schedule a call&nbsp;›</a>
+    </div>
+  </article>
+
+  <div class='text-zinc-400 h-min mt-6 flex gap-4'>
+     <a 
+      class='bg-white p-2 rounded-full block shadow-md hover:shadow-xl transition-all hover:text-lime-500 '
+      href="mailto:michoel@hey.com">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polyline points="224 56 128 144 32 56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline><path d="M32,56H224a0,0,0,0,1,0,0V192a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V56A0,0,0,0,1,32,56Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><line x1="110.5" y1="128" x2="34.5" y2="197.7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="221.5" y1="197.7" x2="145.5" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+    </a>
+    <a 
+      class='bg-white p-2 rounded-full block shadow-md hover:shadow-xl transition-all hover:text-lime-500 '
+      href="https://twitter.com/AnalyzePlatypus">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,88c0-22,18.5-40.3,40.5-40a40,40,0,0,1,36.2,24H240l-32.3,32.3A127.9,127.9,0,0,1,80,224c-32,0-40-12-40-12s32-12,48-36c0,0-64-32-48-120,0,0,40,40,88,48Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+    </a>
+    <a 
+      class='bg-white p-2 rounded-full block shadow-md hover:shadow-xl transition-all hover:text-lime-500 '
+      href="https://www.linkedin.com/in/michoel-samuels-495750106/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><rect x="36" y="36" width="184" height="184" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></rect><line x1="120" y1="112" x2="120" y2="176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="88" y1="112" x2="88" y2="176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><path d="M120,140a28,28,0,0,1,56,0v36" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="88" cy="80" r="12"></circle></svg>
+    </a>
+    <a 
+      class='bg-white p-2 rounded-full block shadow-md hover:shadow-xl transition-all hover:text-lime-500'
+      href="https://github.com/AnalyzePlatypus">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M84,240a23.9,23.9,0,0,0,24-24V168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M172,240a23.9,23.9,0,0,1-24-24V168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M152,168h16a23.9,23.9,0,0,1,24,24v8a23.9,23.9,0,0,0,24,24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M104,168H88a23.9,23.9,0,0,0-24,24v8a23.9,23.9,0,0,1-24,24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><path d="M111.8,64A52,52,0,0,0,68,40a52,52,0,0,0-3.5,44.7A49.3,49.3,0,0,0,56,112v8a48,48,0,0,0,48,48h48a48,48,0,0,0,48-48v-8a49.3,49.3,0,0,0-8.5-27.3A52,52,0,0,0,188,40a52,52,0,0,0-43.8,24Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg>
+    </a>
+  </div>
+</section>
