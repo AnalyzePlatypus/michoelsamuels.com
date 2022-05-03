@@ -6,6 +6,7 @@
     "build": "npx @11ty/eleventy && npx tailwindcss -o _site/css/index.css --minify",
     "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
+    "tailwind": "npx tailwindcss -i ./css/index.css -o ./_site/css/index.css --watch",
     "debug": "DEBUG=* npx @11ty/eleventy"
   },
   "repository": {
