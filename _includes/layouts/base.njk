@@ -30,7 +30,17 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-QTC5PDPXEG"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QTC5PDPXEG');
+      </script>
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
   </body>
